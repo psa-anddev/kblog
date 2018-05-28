@@ -5,13 +5,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion sdk.compileSdkVersion
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 27
+        minSdkVersion sdk.minSdkVersion
+        targetSdkVersion sdk.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner sdk.instrumentationRunner
     }
     buildTypes {
         release {
@@ -23,10 +23,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation libs.kotlin.stdlib
     implementation project(':delivery:base')
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation libs.junit
+    androidTestImplementation libs.android.support.test.runner
+    androidTestImplementation libs.android.support.test.espresso.core
     
 }

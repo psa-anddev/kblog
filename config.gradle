@@ -10,14 +10,28 @@ ext {
 }
 
 def versions = [
-        "kotlin"        : '1.2.41',
-        "android_plugin": "3.2.0-alpha15"
+        kotlin        : '1.2.41',
+        android_plugin: "3.2.0-alpha15",
+        junit         : "4.12",
+        test_runner   : "1.0.2",
+        espresso      : "3.0.2"
 ]
 
 libs.kotlin = [
-        "plugin": "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+        plugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+        stdlib: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}"
 ]
 
 libs.android = [
-        plugin: "com.android.tools.build:gradle:${versions.android_plugin}"
+        plugin : "com.android.tools.build:gradle:${versions.android_plugin}",
+        support: [
+                test: [
+                        runner  : "com.android.support.test:runner:${versions.test_runner}",
+                        espresso: [
+                                core: "com.android.support.test.espresso:espresso-core:${versions.espresso}"
+                        ]
+                ]
+        ]
 ]
+
+libs.junit = "junit:junit:${versions.junit}"
