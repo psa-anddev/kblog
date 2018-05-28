@@ -16,7 +16,10 @@ def versions = [
         espresso         : "3.0.2",
         appcompat        : "27.1.1",
         constraint_layout: "1.1.0",
-        kotlintest       : "3.1.4"
+        rxstreams        : "1.0.2",
+        rxkotlin         : "2.2.0",
+        kotlintest       : "3.1.4",
+        mockito          : "1.5.0"
 ]
 
 libs.kotlin = [
@@ -38,5 +41,11 @@ libs.android = [
         ]
 ]
 
+libs.rx = [
+        streams: "org.reactivestreams:reactive-streams:${versions.rxstreams}",
+        kotlin : "io.reactivex.rxjava2:rxkotlin:${versions.rxkotlin}"
+]
+
 libs.junit = "junit:junit:${versions.junit}"
 libs.kotlintest = "io.kotlintest:kotlintest-runner-junit4:${versions.kotlintest}"
+libs.mockito = "com.nhaarman:mockito-kotlin-kt1.1:${versions.mockito}"

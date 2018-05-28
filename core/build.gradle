@@ -5,9 +5,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation libs.kotlin.stdlib
     implementation libs.rx.kotlin
-    implementation project(":core")
-    testImplementation libs.kotlintest
-    testImplementation libs.mockito
 }
 
 sourceCompatibility = "8"
