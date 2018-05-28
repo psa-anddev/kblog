@@ -1,2 +1,2 @@
-include ':users', ':core'
+include ':users', ':core', ':blogs'
 include 'delivery:users', 'delivery:app', 'delivery:base', 'delivery:instantapp'
