@@ -25,6 +25,6 @@ android {
 }
 
 dependencies {
-    implementation project(':users')
-    implementation project(':base')
+    implementation project(':delivery:users')
+    implementation project(':delivery:base')
 }
