@@ -1,0 +1,23 @@
+ext {
+    sdk = [
+            "compileSdkVersion"    : 27,
+            "targetSdkVersion"     : 27,
+            "minSdkVersion"        : 1,
+            "instrumentationRunner": "android.support.test.runner.AndroidJUnitRunner"
+    ]
+    libs = [:]
+    kotlin_version = '1.2.41'
+}
+
+def versions = [
+        "kotlin"        : '1.2.41',
+        "android_plugin": "3.2.0-alpha15"
+]
+
+libs.kotlin = [
+        "plugin": "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+]
+
+libs.android = [
+        plugin: "com.android.tools.build:gradle:${versions.android_plugin}"
+]
