@@ -10,11 +10,13 @@ ext {
 }
 
 def versions = [
-        kotlin        : '1.2.41',
-        android_plugin: "3.2.0-alpha15",
-        junit         : "4.12",
-        test_runner   : "1.0.2",
-        espresso      : "3.0.2"
+        kotlin           : '1.2.41',
+        android_plugin   : "3.2.0-alpha15",
+        junit            : "4.12",
+        test_runner      : "1.0.2",
+        espresso         : "3.0.2",
+        appcompat        : "27.1.1",
+        constraint_layout: "1.1.0"
 ]
 
 libs.kotlin = [
@@ -25,12 +27,14 @@ libs.kotlin = [
 libs.android = [
         plugin : "com.android.tools.build:gradle:${versions.android_plugin}",
         support: [
-                test: [
+                test             : [
                         runner  : "com.android.support.test:runner:${versions.test_runner}",
                         espresso: [
                                 core: "com.android.support.test.espresso:espresso-core:${versions.espresso}"
                         ]
-                ]
+                ],
+                appcompat        : "com.android.support:appcompat-v7:${versions.appcompat}",
+                constraint_layout: "com.android.support.constraint:constraint-layout:${versions.constraint_layout}"
         ]
 ]
 
