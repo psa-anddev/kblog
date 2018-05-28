@@ -1,9 +1,9 @@
 ext {
     sdk = [
-            "compileSdkVersion"    : 27,
-            "targetSdkVersion"     : 27,
-            "minSdkVersion"        : 1,
-            "instrumentationRunner": "android.support.test.runner.AndroidJUnitRunner"
+            compileSdkVersion    : 27,
+            targetSdkVersion     : 27,
+            minSdkVersion        : 15,
+            instrumentationRunner: "android.support.test.runner.AndroidJUnitRunner"
     ]
     libs = [:]
     kotlin_version = '1.2.41'
