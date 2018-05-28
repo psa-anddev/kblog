@@ -9,4 +9,5 @@ interface UsersGateway {
     fun login(id:String, password: String): Completable
     fun findById(id: String): Single<User>
     fun insert(id: String, firstName: String, lastName: String, password: String): Completable
+    fun logout(): Completable
 }
