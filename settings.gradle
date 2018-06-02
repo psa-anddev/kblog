@@ -1,2 +1,3 @@
-include ':users', ':core', ':blogs'
-include 'delivery:users', 'delivery:app', 'delivery:base', 'delivery:instantapp'
+include ':users', ':core', ':blogs',
+        'delivery:users', 'delivery:app', 'delivery:base',
+        'delivery:instantapp', "gateways:room"
