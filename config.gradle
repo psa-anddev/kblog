@@ -19,7 +19,9 @@ def versions = [
         rxstreams        : "1.0.2",
         rxkotlin         : "2.2.0",
         kotlintest       : "3.1.4",
-        mockito          : "1.5.0"
+        mockito          : "1.5.0",
+        room             : "1.1.1-rc1",
+        robolectric      : '4.0-alpha-2'
 ]
 
 libs.kotlin = [
@@ -37,7 +39,12 @@ libs.android = [
                         ]
                 ],
                 appcompat        : "com.android.support:appcompat-v7:${versions.appcompat}",
-                constraint_layout: "com.android.support.constraint:constraint-layout:${versions.constraint_layout}"
+                constraint_layout: "com.android.support.constraint:constraint-layout:${versions.constraint_layout}",
+                room             : [
+                        core    : "android.arch.persistence.room:runtime:${versions.room}",
+                        compiler: "android.arch.persistence.room:compiler:${versions.room}",
+                        rx      : "android.arch.persistence.room:rxjava2:${versions.room}"
+                ]
         ]
 ]
 
@@ -49,3 +56,4 @@ libs.rx = [
 libs.junit = "junit:junit:${versions.junit}"
 libs.kotlintest = "io.kotlintest:kotlintest-runner-junit4:${versions.kotlintest}"
 libs.mockito = "com.nhaarman:mockito-kotlin-kt1.1:${versions.mockito}"
+libs.robolectric = "org.robolectric:robolectric:${versions.robolectric}"

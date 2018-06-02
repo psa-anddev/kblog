@@ -1,4 +1,7 @@
 apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
 
 android {
     compileSdkVersion sdk.compileSdkVersion
@@ -14,4 +17,16 @@ android {
         main.java.srcDirs += "src/main/kotlin"
         test.java.srcDirs += "src/test/kotlin"
     }
+}
+
+dependencies {
+    implementation project(":core")
+    implementation libs.kotlin.stdlib
+    implementation libs.rx.kotlin
+    implementation libs.android.support.room.core
+    kapt libs.android.support.room.compiler
+    implementation libs.android.support.room.rx
+
+    testImplementation libs.robolectric
+    testImplementation libs.kotlintest
 }
