@@ -5,24 +5,25 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion sdk.compileSdkVersion
+
+
+
     defaultConfig {
         minSdkVersion sdk.minSdkVersion
         targetSdkVersion sdk.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner sdk.instrumentationRunner
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
 
     sourceSets {
         main.java.srcDirs += "src/main/kotlin"
         test.java.srcDirs += "src/test/kotlin"
     }
+
+
 }
 
 dependencies {
@@ -31,7 +32,4 @@ dependencies {
     implementation project(':delivery:base')
     kapt libs.dagger.processor
     testImplementation libs.junit
-    androidTestImplementation libs.android.support.test.runner
-    androidTestImplementation libs.android.support.test.espresso.core
-    
 }

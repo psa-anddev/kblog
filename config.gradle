@@ -22,7 +22,7 @@ def versions = [
         mockito          : "1.5.0",
         room             : "1.1.1-rc1",
         robolectric      : '4.0-alpha-2',
-        dagger           : '2.14'
+        dagger           : '2.14.1'
 ]
 
 libs.kotlin = [
@@ -63,7 +63,9 @@ libs.kotlintest = "io.kotlintest:kotlintest-runner-junit4:${versions.kotlintest}
 libs.mockito = "com.nhaarman:mockito-kotlin-kt1.1:${versions.mockito}"
 libs.robolectric = "org.robolectric:robolectric:${versions.robolectric}"
 libs.dagger = [
-        core     : "com.google.dagger:dagger-android:${versions.dagger}",
+        core     : "com.google.dagger:dagger:${versions.dagger}",
+        compiler     : "com.google.dagger:dagger-compiler:${versions.dagger}",
+        android     : "com.google.dagger:dagger-android:${versions.dagger}",
         support  : "com.google.dagger:dagger-android-support:${versions.dagger}",
         processor: "com.google.dagger:dagger-android-processor:${versions.dagger}"
 ]

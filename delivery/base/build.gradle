@@ -23,6 +23,10 @@ android {
         main.java.srcDirs += "src/main/kotlin"
         test.java.srcDirs += "src/test/kotlin"
     }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -30,7 +34,9 @@ dependencies {
     api libs.android.support.appcompat
     api libs.android.support.constraint_layout
     api libs.dagger.core
+    api libs.dagger.android
     api libs.dagger.support
+    kapt libs.dagger.compiler
     kapt libs.dagger.processor
     implementation project(":core")
     implementation project(":users")
@@ -39,7 +45,9 @@ dependencies {
     implementation libs.kotlin.stdlib
     application project(':delivery:app')
     feature project(':delivery:users')
+    feature project(":delivery:blogs")
 
     testImplementation libs.kotlintest
     testImplementation libs.mockito
+    testImplementation libs.robolectric
 }
