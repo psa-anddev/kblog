@@ -1,4 +1,6 @@
 apply plugin: 'com.android.feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion sdk.compileSdkVersion
@@ -20,6 +22,13 @@ android {
 dependencies {
     api libs.android.support.appcompat
     api libs.android.support.constraint_layout
+    api libs.dagger.core
+    api libs.dagger.support
+    kapt libs.dagger.processor
+    implementation project(":core")
+    implementation project(":users")
+    implementation project(":blogs")
+    implementation libs.kotlin.stdlib
     application project(':delivery:app')
     feature project(':delivery:users')
 }
