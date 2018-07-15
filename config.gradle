@@ -48,7 +48,8 @@ libs.android = [
                         rx      : "android.arch.persistence.room:rxjava2:${versions.room}"
                 ],
                 arch_components: [
-                        runtime: "android.arch.core:runtime:1.1.1"
+                        runtime: "android.arch.core:runtime:1.1.1",
+                        test: "android.arch.core:core-testing:1.1.1"
                 ]
         ]
 ]
