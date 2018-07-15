@@ -9,7 +9,8 @@ import dagger.android.support.AndroidSupportInjectionModule
 
 @Component(modules = [(GatewaysModule::class),
     (UsersModule::class), (BlogsModule::class),
-    (AndroidSupportInjectionModule::class)])
+    (AndroidSupportInjectionModule::class),
+    (BaseDeliveryModule::class)])
 interface GlobalComponent: AndroidInjector<KBlog> {
     @Component.Builder
     interface Builder {
