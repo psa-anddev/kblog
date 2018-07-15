@@ -9,8 +9,8 @@ ext {
 }
 
 def versions = [
-        kotlin           : '1.2.41',
-        android_plugin   : "3.2.0-alpha17",
+        kotlin           : '1.2.51',
+        android_plugin   : "3.3.0-alpha03",
         junit            : "4.12",
         test_runner      : "1.0.2",
         espresso         : "3.0.2",
