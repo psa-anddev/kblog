@@ -1,6 +1,8 @@
 package com.psa.kblog.di
 
 import com.psa.kblog.gateways.UsersGateway
+import com.psa.kblog.users.checklogin.CheckLogin
+import com.psa.kblog.users.checklogin.CheckLoginInput
 import com.psa.kblog.users.login.Login
 import com.psa.kblog.users.login.LoginInput
 import com.psa.kblog.users.logout.Logout
@@ -23,4 +25,8 @@ class UsersModule {
     @Provides
     fun provideRegistrationInteractor(usersGateway: UsersGateway): RegisterInput =
             Register(usersGateway)
+
+    @Provides
+    fun provideCheckLoginInteractor(usersGateway: UsersGateway): CheckLoginInput =
+            CheckLogin(usersGateway)
 }

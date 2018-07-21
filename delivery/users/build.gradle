@@ -47,6 +47,7 @@ dependencies {
     testImplementation libs.kotlintest
     testImplementation libs.mockito
     testImplementation libs.android.support.arch_components.test
+    testImplementation project(":delivery:test-utils")
     androidTestImplementation libs.android.support.test.runner
     androidTestImplementation libs.android.support.test.espresso.core
     

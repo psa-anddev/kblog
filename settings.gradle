@@ -1,3 +1,4 @@
 include ':users', ':core', ':blogs', 'delivery:blogs',
         'delivery:users', 'delivery:app', 'delivery:base',
-        'delivery:instantapp', "gateways:room"
+        'delivery:instantapp', 'delivery:test-utils',
+        "gateways:room"

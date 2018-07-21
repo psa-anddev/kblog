@@ -2,6 +2,7 @@ package com.psa.kblog.di
 
 import android.app.Application
 import com.psa.kblog.KBlog
+import com.psa.kblog.users.checklogin.CheckLoginInput
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -16,7 +17,10 @@ interface GlobalComponent: AndroidInjector<KBlog> {
     interface Builder {
         @BindsInstance
         fun application(application: Application) : Builder
+        fun baseDeliveryModule(module: BaseDeliveryModule): Builder
 
         fun build(): GlobalComponent
     }
+
+    fun checkLogin(): CheckLoginInput
 }

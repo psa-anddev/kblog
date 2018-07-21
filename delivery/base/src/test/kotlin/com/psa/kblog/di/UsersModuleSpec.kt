@@ -1,6 +1,7 @@
 package com.psa.kblog.di
 
 import com.nhaarman.mockito_kotlin.mock
+import com.psa.kblog.users.checklogin.CheckLogin
 import com.psa.kblog.users.login.Login
 import com.psa.kblog.users.logout.Logout
 import com.psa.kblog.users.register.Register
@@ -22,5 +23,10 @@ class UsersModuleSpec: ShouldSpec({
     should("return a registration interactor") {
         UsersModule().provideRegistrationInteractor(mock { }) should
                 beInstanceOf(Register::class)
+    }
+
+    should("return the right check login use case") {
+        UsersModule().provideCheckLoginInteractor(mock { }) should
+                beInstanceOf(CheckLogin::class)
     }
 })
