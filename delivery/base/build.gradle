@@ -42,6 +42,7 @@ dependencies {
     implementation project(":users")
     implementation project(":blogs")
     implementation project(":gateways:room")
+    implementation project(":delivery:di")
     implementation libs.kotlin.stdlib
     application project(':delivery:app')
     feature project(':delivery:users')
