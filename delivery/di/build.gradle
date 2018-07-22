@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion sdk.compileSdkVersion
+    defaultConfig {
+        minSdkVersion sdk.minSdkVersion
+        targetSdkVersion sdk.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+    }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+}
+
+dependencies {
+    api libs.android.support.arch_components.runtime
+    api libs.android.support.appcompat
+    api libs.android.support.constraint_layout
+    implementation libs.dagger.core
+    implementation libs.dagger.android
+    implementation libs.dagger.support
+    kapt libs.dagger.compiler
+    kapt libs.dagger.processor
+    implementation libs.kotlin.stdlib
+
+    testImplementation libs.kotlintest
+    testImplementation libs.mockito
+    testImplementation libs.robolectric
+}
