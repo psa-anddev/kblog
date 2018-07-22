@@ -1,20 +1,19 @@
 package com.psa.kblog
 
-import com.psa.kblog.di.BaseDeliveryModule
-import com.psa.kblog.di.DaggerGlobalComponent
+import com.psa.kblog.di.*
 import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
 
-class KBlog : DaggerApplication() {
-    val component: AndroidInjector<out DaggerApplication> by
+class KBlog : MultiFeatureDaggerApplication<GlobalComponent>() {
+    val component: AndroidInjector<MultiFeatureDaggerApplication<GlobalComponent>> by
     lazy {
+        @Suppress("UNCHECKED_CAST")
         DaggerGlobalComponent.builder()
                 .application(this)
                 .baseDeliveryModule(BaseDeliveryModule(this))
-                .build()
+                .build() as AndroidInjector<MultiFeatureDaggerApplication<GlobalComponent>>
     }
 
     override fun applicationInjector():
-            AndroidInjector<out DaggerApplication> =
+            AndroidInjector<MultiFeatureDaggerApplication<GlobalComponent>> =
             component
 }
