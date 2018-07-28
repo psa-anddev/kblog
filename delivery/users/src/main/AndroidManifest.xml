@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.psa.kblog.users">
 
-    <application>
+    <application android:theme="@style/Theme.AppCompat"
+        tools:replace="android:theme">
         <activity android:name=".MainActivity">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
