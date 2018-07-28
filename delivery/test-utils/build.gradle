@@ -20,6 +20,11 @@ android {
 dependencies {
     implementation libs.android.support.appcompat
     implementation libs.kotlin.stdlib
+    implementation libs.dagger.android
+    implementation libs.dagger.support
+    implementation project(":delivery:base")
+    implementation project(":users")
+    implementation project(":core")
 
     testImplementation libs.kotlintest
     testImplementation libs.mockito

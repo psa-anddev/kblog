@@ -13,20 +13,20 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class UsersModule {
+open class UsersModule {
     @Provides
-    fun provideLoginInteractor(usersGateway: UsersGateway): LoginInput =
+    open fun provideLoginInteractor(usersGateway: UsersGateway): LoginInput =
             Login(usersGateway)
 
     @Provides
-    fun provideLogOutInteractor(usersGateway: UsersGateway): LogoutInput =
+    open fun provideLogOutInteractor(usersGateway: UsersGateway): LogoutInput =
             Logout(usersGateway)
 
     @Provides
-    fun provideRegistrationInteractor(usersGateway: UsersGateway): RegisterInput =
+    open fun provideRegistrationInteractor(usersGateway: UsersGateway): RegisterInput =
             Register(usersGateway)
 
     @Provides
-    fun provideCheckLoginInteractor(usersGateway: UsersGateway): CheckLoginInput =
+    open fun provideCheckLoginInteractor(usersGateway: UsersGateway): CheckLoginInput =
             CheckLogin(usersGateway)
 }
