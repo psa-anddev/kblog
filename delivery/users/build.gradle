@@ -49,6 +49,8 @@ dependencies {
     testImplementation libs.mockito
     testImplementation libs.android.support.arch_components.test
     testImplementation project(":delivery:test-utils")
+    testImplementation libs.robolectric
+    testImplementation libs.robolectric_support
     androidTestImplementation libs.android.support.test.runner
     androidTestImplementation libs.android.support.test.espresso.core
     

@@ -4,34 +4,34 @@ import android.app.Activity
 import android.app.Application
 import android.support.v4.app.Fragment
 import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject
 
 abstract class MultiFeatureDaggerApplication<T>:
         Application(), HasActivityInjector, HasSupportFragmentInjector {
-    @Suppress("MemberVisibilityCanBePrivate")
-    @Inject internal lateinit var activityInjector: DispatchingAndroidInjector<Activity>
-    @Suppress("MemberVisibilityCanBePrivate")
-    @Inject internal lateinit var supportFragmentInjector: DispatchingAndroidInjector<Fragment>
+
+    @Inject internal lateinit var multiFeatureInjector: MultiFeatureInjector<T>
 
     @Volatile
     private var shouldInject = true
 
     override fun activityInjector(): AndroidInjector<Activity> =
-            activityInjector
+            multiFeatureInjector.activityInjector
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> =
-            supportFragmentInjector
+            multiFeatureInjector.supportFragmentInjector
 
-    protected abstract fun applicationInjector(): AndroidInjector<MultiFeatureDaggerApplication<T>>
+    protected abstract fun applicationInjector(): AndroidInjector<out MultiFeatureDaggerApplication<T>>
 
+    @Suppress("UNCHECKED_CAST")
     override fun onCreate() {
         super.onCreate()
         if (shouldInject) {
             synchronized(this) {
-                applicationInjector().inject(this)
+                val injector =
+                        applicationInjector() as AndroidInjector<MultiFeatureDaggerApplication<T>>
+                injector.inject(this)
                 if (shouldInject)
                     throw IllegalStateException("Application context couldn't be injected")
             }

@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="feature.injector.users"
+            android:value="com.psa.kblog.users.splash.SplashComponentBuilder" />
     </application>
 
 </manifest>

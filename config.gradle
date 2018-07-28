@@ -63,6 +63,7 @@ libs.junit = "junit:junit:${versions.junit}"
 libs.kotlintest = "io.kotlintest:kotlintest-runner-junit4:${versions.kotlintest}"
 libs.mockito = "com.nhaarman:mockito-kotlin-kt1.1:${versions.mockito}"
 libs.robolectric = "org.robolectric:robolectric:${versions.robolectric}"
+libs.robolectric_support = "org.robolectric:shadows-supportv4:${versions.robolectric}"
 libs.dagger = [
         core     : "com.google.dagger:dagger:${versions.dagger}",
         compiler     : "com.google.dagger:dagger-compiler:${versions.dagger}",

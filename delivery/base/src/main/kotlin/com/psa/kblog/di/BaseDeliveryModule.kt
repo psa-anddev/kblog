@@ -7,5 +7,5 @@ import dagger.Provides
 @Module
 class BaseDeliveryModule(private val context: Context) {
     @Provides
-    fun provideContext():Context = context
+    fun provideContext(): Context = context
 }
