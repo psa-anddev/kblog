@@ -18,6 +18,7 @@ interface GlobalComponent: AndroidInjector<KBlog> {
         @BindsInstance
         fun application(application: Application) : Builder
         fun baseDeliveryModule(module: BaseDeliveryModule): Builder
+        fun usersModule(module: UsersModule)
 
         fun build(): GlobalComponent
     }
