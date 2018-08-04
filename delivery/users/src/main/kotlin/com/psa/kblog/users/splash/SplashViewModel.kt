@@ -19,11 +19,11 @@ class SplashViewModel
     }
 
     override fun generateViewModel(response: CheckLoginResponse) {
-        (sessionState as MutableLiveData).value = LOGGED_IN
+        (sessionState as MutableLiveData).postValue(LOGGED_IN)
     }
 
     override fun generateViewModel(error: UserNotLoggedIn) {
-        (sessionState as MutableLiveData).value = UNKNOWN_USER
+        (sessionState as MutableLiveData).postValue(UNKNOWN_USER)
     }
 }
 
