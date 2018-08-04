@@ -1,2 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.psa.kblog.app" />
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.psa.kblog.app">
+
+    <application tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.psa.kblog.lifecycle-trojan"
+            tools:replace="android:authorities"
+            tools:ignore="ExportedContentProvider" />
+    </application>
+</manifest>
