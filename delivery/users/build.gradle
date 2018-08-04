@@ -41,10 +41,7 @@ dependencies {
     implementation libs.dagger.core
     implementation libs.dagger.android
     implementation libs.dagger.support
-    implementation libs.android.support.arch_components.runtime
-    implementation libs.android.support.arch_components.extensions
-    implementation libs.android.support.navigation.fragment
-    implementation libs.android.support.navigation.ui
+
     kapt libs.dagger.compiler
     kapt libs.dagger.processor
 

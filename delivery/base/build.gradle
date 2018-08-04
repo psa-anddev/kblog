@@ -33,6 +33,10 @@ dependencies {
     api libs.android.support.arch_components.runtime
     api libs.android.support.appcompat
     api libs.android.support.constraint_layout
+    api libs.android.support.arch_components.runtime
+    api libs.android.support.arch_components.extensions
+    api libs.android.support.navigation.fragment
+    api libs.android.support.navigation.ui
     implementation libs.dagger.core
     implementation libs.dagger.android
     implementation libs.dagger.support
