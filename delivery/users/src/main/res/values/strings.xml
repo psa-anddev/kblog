@@ -2,4 +2,9 @@
 <resources>
     <string name="register">Register</string>
     <string name="logIn">Log In</string>
+    <string name="userId">User id</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword">Confirm Password</string>
 </resources>
