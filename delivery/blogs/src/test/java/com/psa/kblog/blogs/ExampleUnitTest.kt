@@ -1,4 +1,4 @@
-package com.psa.kblog.blogsd
+package com.psa.kblog.blogs
 
 import org.junit.Test
 

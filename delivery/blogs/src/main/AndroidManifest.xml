@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.psa.kblog.blogsd">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.psa.kblog.blogs">
 
-    <application>
+    <application
+        tools:ignore="AllowBackup,MissingApplicationIcon">
         <activity android:name=".BlogsActivity">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
@@ -14,11 +16,6 @@
                     android:host="psa.com"
                     android:pathPattern="/blogs"
                     android:scheme="https" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
