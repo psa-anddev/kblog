@@ -55,7 +55,8 @@ libs.android = [
                 ],
                 navigation: [
                         fragment:  "android.arch.navigation:navigation-fragment-ktx:${versions.navigation}",
-                        ui:  "android.arch.navigation:navigation-ui-ktx:${versions.navigation}"
+                        ui:  "android.arch.navigation:navigation-ui-ktx:${versions.navigation}",
+                        testing:  "android.arch.navigation:navigation-testing-ktx:${versions.navigation}"
                 ]
         ]
 ]

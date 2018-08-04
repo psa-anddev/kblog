@@ -9,5 +9,14 @@
         android:id="@+id/splashFragment"
         android:name="com.psa.kblog.users.splash.SplashFragment"
         tools:layout="@layout/splash"
-        android:label="SplashFragment" />
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/welcomeAction"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.psa.kblog.users.welcome.WelcomeFragment"
+        tools:layout="@layout/welcome"
+        android:label="WelcomeFragment" />
 </navigation>
