@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:name=".KBlog"
         android:theme="@style/AppTheme"
-        tools:replace="android:theme">
+        tools:replace="android:theme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <meta-data
             android:name="aia-compat-api-min-version"
             android:value="1" />
