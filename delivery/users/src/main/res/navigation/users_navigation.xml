@@ -18,5 +18,22 @@
         android:id="@+id/welcomeFragment"
         android:name="com.psa.kblog.users.welcome.WelcomeFragment"
         tools:layout="@layout/welcome"
-        android:label="WelcomeFragment" />
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/registerAction"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/loginAction"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.psa.kblog.users.register.RegisterFragment"
+        tools:layout="@layout/register"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.psa.kblog.users.login.LogInFragment"
+        tools:layout="@layout/login"
+        android:label="LogInFragment" />
 </navigation>
