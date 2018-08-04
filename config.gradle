@@ -51,7 +51,7 @@ libs.android = [
                 arch_components  : [
                         runtime   : "android.arch.core:runtime:1.1.1",
                         test      : "android.arch.core:core-testing:1.1.1",
-                        extensions: "android.arch.lifecycle:extensions:1.1.0"
+                        extensions: "android.arch.lifecycle:extensions:1.1.1"
                 ],
                 navigation: [
                         fragment:  "android.arch.navigation:navigation-fragment-ktx:${versions.navigation}",
