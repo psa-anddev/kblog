@@ -27,5 +27,6 @@ android {
 dependencies {
     implementation project(':delivery:users')
     implementation project(':delivery:base')
+    implementation project(':delivery:blogs')
     implementation libs.kotlin.stdlib
 }
