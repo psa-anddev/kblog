@@ -1,7 +1,7 @@
 ext {
     sdk = [
-            compileSdkVersion    : 'android-P',
-            targetSdkVersion     : 27,
+            compileSdkVersion    : 28,
+            targetSdkVersion     : 28,
             minSdkVersion        : 15,
             instrumentationRunner: "android.support.test.runner.AndroidJUnitRunner"
     ]
@@ -20,7 +20,7 @@ def versions = [
         rxkotlin         : "2.2.0",
         kotlintest       : "3.1.4",
         mockito          : "1.5.0",
-        room             : "1.1.1-rc1",
+        room             : "1.1.1",
         robolectric      : '4.0-alpha-3',
         dagger           : '2.14.1',
         navigation       : "1.0.0-alpha04"
