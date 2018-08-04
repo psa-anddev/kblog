@@ -23,7 +23,8 @@ def versions = [
         room             : "1.1.1",
         robolectric      : '4.0-alpha-3',
         dagger           : '2.14.1',
-        navigation       : "1.0.0-alpha04"
+        navigation       : "1.0.0-alpha04",
+        arch_components  : "1.1.1"
 ]
 
 libs.kotlin = [
@@ -49,14 +50,14 @@ libs.android = [
                         rx      : "android.arch.persistence.room:rxjava2:${versions.room}"
                 ],
                 arch_components  : [
-                        runtime   : "android.arch.core:runtime:1.1.1",
-                        test      : "android.arch.core:core-testing:1.1.1",
-                        extensions: "android.arch.lifecycle:extensions:1.1.1"
+                        runtime   : "android.arch.core:runtime:${versions.arch_components}",
+                        test      : "android.arch.core:core-testing:${versions.arch_components}",
+                        extensions: "android.arch.lifecycle:extensions:${versions.arch_components}"
                 ],
-                navigation: [
-                        fragment:  "android.arch.navigation:navigation-fragment-ktx:${versions.navigation}",
-                        ui:  "android.arch.navigation:navigation-ui-ktx:${versions.navigation}",
-                        testing:  "android.arch.navigation:navigation-testing-ktx:${versions.navigation}"
+                navigation       : [
+                        fragment: "android.arch.navigation:navigation-fragment-ktx:${versions.navigation}",
+                        ui      : "android.arch.navigation:navigation-ui-ktx:${versions.navigation}",
+                        testing : "android.arch.navigation:navigation-testing-ktx:${versions.navigation}"
                 ]
         ]
 ]
