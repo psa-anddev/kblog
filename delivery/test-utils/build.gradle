@@ -25,7 +25,8 @@ dependencies {
     implementation project(":delivery:base")
     implementation project(":users")
     implementation project(":core")
+    implementation libs.android.support.arch_components.test
+    implementation libs.kotlintest
 
-    testImplementation libs.kotlintest
     testImplementation libs.mockito
 }
