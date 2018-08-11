@@ -1,20 +1,17 @@
 package com.psa.kblog.users.splash
 
-import android.arch.core.executor.ArchTaskExecutor
-import android.arch.core.executor.TaskExecutor
-import android.arch.lifecycle.Lifecycle.Event.ON_RESUME
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.LifecycleRegistry
-import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModel
-import com.nhaarman.mockito_kotlin.*
+import com.nhaarman.mockito_kotlin.eq
+import com.nhaarman.mockito_kotlin.isA
+import com.nhaarman.mockito_kotlin.mock
+import com.nhaarman.mockito_kotlin.then
 import com.psa.kblog.entities.User
 import com.psa.kblog.users.checklogin.CheckLoginInput
 import com.psa.kblog.users.checklogin.CheckLoginResponse
 import com.psa.kblog.users.checklogin.UserNotLoggedIn
-import com.psa.kblog.users.splash.SessionStatus.*
-import io.kotlintest.Description
-import io.kotlintest.Spec
+import com.psa.kblog.users.splash.SessionStatus.LOGGED_IN
+import com.psa.kblog.users.splash.SessionStatus.UNKNOWN_USER
+import com.psa.kblog.utils.listeners.InstantTaskExecutorListener
 import io.kotlintest.extensions.TestListener
 import io.kotlintest.matchers.beInstanceOf
 import io.kotlintest.should
@@ -38,66 +35,21 @@ class SplashViewModelSpec : ShouldSpec({
 
     should("communicate the view that the user is logged in") {
         val viewModel = SplashViewModel(Provider { mock<CheckLoginInput> { } })
-        var actual: SessionStatus? = null
-
-
-        val lifecycleOwner: LifecycleOwner = mock { }
-
-        val lifecycle = LifecycleRegistry(lifecycleOwner)
-        given(lifecycleOwner.lifecycle)
-                .willReturn(lifecycle)
-
-        lifecycle.handleLifecycleEvent(ON_RESUME)
-        viewModel.sessionState.observe(lifecycleOwner,
-                Observer<SessionStatus> { actual = it })
 
         viewModel.generateViewModel(
                 CheckLoginResponse(User(id = "bb", firstName = "Bitte", lastName = "Bitte")))
-        actual shouldBe LOGGED_IN
+
+        viewModel.sessionState.value shouldBe LOGGED_IN
     }
 
     should("communicate the view that the user is not logged in") {
         val viewModel = SplashViewModel(Provider { mock<CheckLoginInput> { } })
-        var actual: SessionStatus? = null
-
-
-        val lifecycleOwner: LifecycleOwner = mock { }
-
-        val lifecycle = LifecycleRegistry(lifecycleOwner)
-        given(lifecycleOwner.lifecycle)
-                .willReturn(lifecycle)
-
-        lifecycle.handleLifecycleEvent(ON_RESUME)
-        viewModel.sessionState.observe(lifecycleOwner,
-                Observer<SessionStatus> { actual = it })
 
         viewModel.generateViewModel(UserNotLoggedIn(Throwable()))
-        actual shouldBe UNKNOWN_USER
+
+        viewModel.sessionState.value shouldBe UNKNOWN_USER
     }
 }) {
-    override fun listeners(): List<TestListener> {
-        return super.listeners() + InstantTaskExecutorExtension()
-    }
-}
-
-class InstantTaskExecutorExtension : TestListener {
-    override fun beforeSpec(description: Description, spec: Spec) {
-        super.beforeSpec(description, spec)
-        ArchTaskExecutor.getInstance().setDelegate(object : TaskExecutor() {
-            override fun executeOnDiskIO(runnable: Runnable) {
-                runnable.run()
-            }
-
-            override fun isMainThread(): Boolean = true
-
-            override fun postToMainThread(runnable: Runnable) {
-                runnable.run()
-            }
-        })
-    }
-
-    override fun afterSpec(description: Description, spec: Spec) {
-        ArchTaskExecutor.getInstance().setDelegate(null)
-        super.afterSpec(description, spec)
-    }
+    override fun listeners(): List<TestListener> =
+            super.listeners() + InstantTaskExecutorListener()
 }
