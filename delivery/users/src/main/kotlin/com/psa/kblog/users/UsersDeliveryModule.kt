@@ -28,6 +28,7 @@ abstract class UsersDeliveryModule {
     internal abstract fun bindViewModelFactory(
             factory: CustomViewModelFactory)
             : ViewModelProvider.Factory
+
     @Binds
     @IntoMap
     @ViewModelKey(SplashViewModel::class)
