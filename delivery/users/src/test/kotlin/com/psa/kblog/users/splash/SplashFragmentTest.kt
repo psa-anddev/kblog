@@ -85,7 +85,6 @@ private class SplashFragmentApplication : KBlog() {
     lazy {
         DaggerGlobalComponent.builder()
                 .application(this)
-                .baseDeliveryModule(BaseDeliveryModule(this))
                 .usersModule(TestUsersModule(checkLoginInteractor = checkLogin))
                 .build()
     }

@@ -8,7 +8,6 @@ open class KBlog : MultiFeatureDaggerApplication<GlobalComponent>() {
     lazy {
         DaggerGlobalComponent.builder()
                 .application(this)
-                .baseDeliveryModule(BaseDeliveryModule(this))
                 .build()
     }
 

@@ -37,7 +37,6 @@ private class RegisterFragmentApplication: KBlog() {
     lazy {
         DaggerGlobalComponent.builder()
                 .application(this)
-                .baseDeliveryModule(BaseDeliveryModule(this))
                 .usersModule(TestUsersModule(registerInteractor = register))
                 .build()
     }
