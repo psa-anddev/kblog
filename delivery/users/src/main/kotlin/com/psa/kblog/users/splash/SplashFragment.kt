@@ -5,15 +5,14 @@ import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.OnLifecycleEvent
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.psa.kblog.extensions.navigateToBlogs
 import com.psa.kblog.users.R
-import com.psa.kblog.users.splash.SessionStatus.*
+import com.psa.kblog.users.splash.SessionStatus.LOGGED_IN
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
@@ -38,10 +37,7 @@ class SplashFragment : DaggerFragment(), LifecycleObserver {
         viewModel.sessionState.observe({ lifecycle },
                 {
                     if (it == LOGGED_IN)
-                        startActivity(Intent().apply {
-                            data = Uri.parse("https://psa.com/blogs")
-                            `package` = "com.psa.kblogs"
-                        })
+                        navigateToBlogs()
                     else
                         try {
                             findNavController().navigate(R.id.welcomeAction)
