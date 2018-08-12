@@ -23,6 +23,6 @@ interface GlobalComponent: AndroidInjector<KBlog> {
         fun build(): GlobalComponent
     }
 
-    fun checkLogin(): CheckLoginInput
-    fun register(): RegisterInput
+    val checkLogin: CheckLoginInput
+    val register: RegisterInput
 }
