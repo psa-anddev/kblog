@@ -21,7 +21,7 @@ class UsersModuleSpec: ShouldSpec({
     }
 
     should("return a registration interactor") {
-        UsersModule().provideRegistrationInteractor(mock { }) should
+        UsersModule().provideRegisterInteractor(mock { }) should
                 beInstanceOf(Register::class)
     }
 

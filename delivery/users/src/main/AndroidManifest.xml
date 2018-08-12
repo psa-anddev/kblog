@@ -25,11 +25,8 @@
             </intent-filter>
         </activity>
         <meta-data
-            android:name="feature.injector.users.splash"
-            android:value="com.psa.kblog.users.splash.SplashComponentBuilder" />
-        <meta-data
-            android:name="feature.injector.users.register"
-            android:value="com.psa.kblog.users.register.RegistrationComponentBuilder" />
+            android:name="feature.injector.users"
+            android:value="com.psa.kblog.users.UsersComponentBuilder" />
     </application>
 
 </manifest>

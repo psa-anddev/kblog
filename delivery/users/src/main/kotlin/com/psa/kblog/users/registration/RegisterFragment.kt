@@ -1,14 +1,17 @@
-package com.psa.kblog.users.register
+package com.psa.kblog.users.registration
 
+import android.arch.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.psa.kblog.users.R
-import kotlinx.android.synthetic.main.welcome.view.*
+import dagger.android.support.DaggerFragment
+import javax.inject.Inject
 
-class RegisterFragment: Fragment() {
+class RegisterFragment: DaggerFragment() {
+    @Inject internal lateinit var viewModelFactory: ViewModelProvider.Factory
+
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? =

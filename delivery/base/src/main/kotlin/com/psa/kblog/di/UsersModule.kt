@@ -23,7 +23,7 @@ open class UsersModule {
             Logout(usersGateway)
 
     @Provides
-    open fun provideRegistrationInteractor(usersGateway: UsersGateway): RegisterInput =
+    open fun provideRegisterInteractor(usersGateway: UsersGateway): RegisterInput =
             Register(usersGateway)
 
     @Provides

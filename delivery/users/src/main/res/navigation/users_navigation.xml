@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.psa.kblog.users.register.RegisterFragment"
+        android:name="com.psa.kblog.users.registration.RegisterFragment"
         tools:layout="@layout/register"
         android:label="RegisterFragment" />
     <fragment

@@ -3,6 +3,7 @@ package com.psa.kblog.di
 import android.app.Application
 import com.psa.kblog.KBlog
 import com.psa.kblog.users.checklogin.CheckLoginInput
+import com.psa.kblog.users.register.RegisterInput
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -24,4 +25,5 @@ interface GlobalComponent: AndroidInjector<KBlog> {
     }
 
     fun checkLogin(): CheckLoginInput
+    fun register(): RegisterInput
 }

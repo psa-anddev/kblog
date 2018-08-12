@@ -1,9 +1,11 @@
-package com.psa.kblog.users.register
+package com.psa.kblog.users.registration
 
 import android.arch.lifecycle.ViewModel
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.then
 import com.psa.kblog.users.R
+import com.psa.kblog.users.register.*
+import com.psa.kblog.users.registration.RegistrationViewModel
 import com.psa.kblog.utils.listeners.InstantTaskExecutorListener
 import io.kotlintest.extensions.TestListener
 import io.kotlintest.matchers.beInstanceOf
@@ -47,7 +49,7 @@ class RegistrationViewModelSpec : ShouldSpec({
     }
 
     should("be a view model") {
-        RegistrationViewModel(Provider { mock<RegisterInput> { }}) should
+        RegistrationViewModel(Provider { mock<RegisterInput> { } }) should
                 beInstanceOf<ViewModel>()
     }
 

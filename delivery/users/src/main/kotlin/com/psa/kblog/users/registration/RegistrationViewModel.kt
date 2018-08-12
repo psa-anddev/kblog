@@ -1,9 +1,10 @@
-package com.psa.kblog.users.register
+package com.psa.kblog.users.registration
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.psa.kblog.users.R
+import com.psa.kblog.users.register.*
 import javax.inject.Inject
 import javax.inject.Provider
 

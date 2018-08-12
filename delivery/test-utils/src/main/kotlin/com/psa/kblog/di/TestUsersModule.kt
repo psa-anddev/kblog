@@ -17,8 +17,8 @@ class TestUsersModule(private val logInInteractor: LoginInput? = null,
     override fun provideLogOutInteractor(usersGateway: UsersGateway): LogoutInput =
             logOutInteractor ?: super.provideLogOutInteractor(usersGateway)
 
-    override fun provideRegistrationInteractor(usersGateway: UsersGateway): RegisterInput =
-            registerInteractor ?: super.provideRegistrationInteractor(usersGateway)
+    override fun provideRegisterInteractor(usersGateway: UsersGateway): RegisterInput =
+            registerInteractor ?: super.provideRegisterInteractor(usersGateway)
 
     override fun provideCheckLoginInteractor(usersGateway: UsersGateway): CheckLoginInput =
             checkLoginInteractor ?: super.provideCheckLoginInteractor(usersGateway)

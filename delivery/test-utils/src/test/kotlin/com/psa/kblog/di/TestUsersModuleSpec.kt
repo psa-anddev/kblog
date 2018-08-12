@@ -42,14 +42,14 @@ class TestUsersModuleSpec: ShouldSpec({
     }
 
     should("provide the default registration interactor") {
-        TestUsersModule().provideRegistrationInteractor(mock { }) should
+        TestUsersModule().provideRegisterInteractor(mock { }) should
                 beInstanceOf(Register::class)
     }
 
     should("provide the registration interactor I pass") {
         val registerInteractor = mock<RegisterInput> {  }
         TestUsersModule(registerInteractor = registerInteractor)
-                .provideRegistrationInteractor(mock { }) shouldBe registerInteractor
+                .provideRegisterInteractor(mock { }) shouldBe registerInteractor
     }
 
     should("provide the default check log in interactor") {

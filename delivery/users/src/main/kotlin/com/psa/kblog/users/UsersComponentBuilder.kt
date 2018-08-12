@@ -1,13 +1,13 @@
-package com.psa.kblog.users.splash
+package com.psa.kblog.users
 
 import com.psa.kblog.di.FeatureAndroidInjector
 import com.psa.kblog.di.FeatureComponentBuilder
 import com.psa.kblog.di.GlobalComponent
 
 @Suppress("unused")
-class SplashComponentBuilder: FeatureComponentBuilder<GlobalComponent> {
+class UsersComponentBuilder: FeatureComponentBuilder<GlobalComponent> {
     override fun createComponent(component: GlobalComponent): FeatureAndroidInjector =
-            DaggerSplashComponent.builder()
+            DaggerUsersComponent.builder()
                     .globalComponent(component)
                     .build()
 }
