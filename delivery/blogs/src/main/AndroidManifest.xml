@@ -13,9 +13,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="psa.com"
-                    android:pathPattern="/blogs"
-                    android:scheme="https" />
+                    android:host="blogs"
+                    android:scheme="kblogs" />
             </intent-filter>
         </activity>
     </application>

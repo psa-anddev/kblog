@@ -74,8 +74,8 @@ class RegisterFragmentTest {
 
         val intent = shadowOf(fragment.activity).nextStartedActivity
         intent shouldNotBe null
-        intent?.`package` shouldBe "com.psa.kblogs"
-        intent?.data.toString() shouldBe "https://psa.com/blogs"
+        intent?.`package` shouldBe "com.psa.kblog.app"
+        intent?.data.toString() shouldBe "kblogs://blogs"
     }
 
     @Test

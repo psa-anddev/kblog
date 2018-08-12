@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment
 fun Fragment.navigateToBlogs() {
     startActivity(Intent()
             .apply {
-                `package` = "com.psa.kblogs"
-                data = Uri.parse("https://psa.com/blogs")
+                this.`package` = "com.psa.kblog.app"
+                data = Uri.parse("kblogs://blogs")
             })
 }
