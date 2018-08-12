@@ -4,7 +4,8 @@
     package="com.psa.kblog.users">
 
     <application android:theme="@style/Theme.AppCompat"
-        tools:replace="android:theme">
+        tools:replace="android:theme"
+        tools:ignore="AllowBackup,MissingApplicationIcon">
         <activity android:name=".MainActivity">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
@@ -24,8 +25,11 @@
             </intent-filter>
         </activity>
         <meta-data
-            android:name="feature.injector.users"
+            android:name="feature.injector.users.splash"
             android:value="com.psa.kblog.users.splash.SplashComponentBuilder" />
+        <meta-data
+            android:name="feature.injector.users.register"
+            android:value="com.psa.kblog.users.register.RegistrationComponentBuilder" />
     </application>
 
 </manifest>
