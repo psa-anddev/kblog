@@ -1,5 +1,7 @@
 package com.psa.kblog.users.register
 
+import android.arch.lifecycle.ViewModel
+import android.arch.lifecycle.ViewModelProvider
 import com.psa.kblog.di.CustomViewModelFactory
 import com.psa.kblog.di.ViewModelKey
 import dagger.Binds
@@ -13,10 +15,11 @@ abstract class RegistrationModule {
     abstract fun bindRegistrationFragment(): RegisterFragment
 
     @Binds
-    internal abstract fun bindViewModelFactory(factory: CustomViewModelFactory)
+    internal abstract fun bindViewModelFactory(factory: CustomViewModelFactory):
+            ViewModelProvider.Factory
 
     @Binds
     @IntoMap
     @ViewModelKey(RegistrationViewModel::class)
-    internal abstract fun registrationViewModel(viewModel: RegistrationViewModel)
+    internal abstract fun registrationViewModel(viewModel: RegistrationViewModel): ViewModel
 }
