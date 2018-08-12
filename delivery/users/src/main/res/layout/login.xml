@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/id"
+        android:id="@+id/userId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id"
+        app:layout_constraintTop_toBottomOf="@+id/userId"
         app:passwordToggleEnabled="true">
 
         <android.support.design.widget.TextInputEditText
