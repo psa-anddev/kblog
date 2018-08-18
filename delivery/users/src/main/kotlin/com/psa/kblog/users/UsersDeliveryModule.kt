@@ -4,6 +4,8 @@ import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import com.psa.kblog.di.CustomViewModelFactory
 import com.psa.kblog.di.ViewModelKey
+import com.psa.kblog.users.login.LogInFragment
+import com.psa.kblog.users.login.LoginViewModel
 import com.psa.kblog.users.register.RegisterInput
 import com.psa.kblog.users.register.RegisterOutput
 import com.psa.kblog.users.register.RegisterRequest
@@ -23,6 +25,8 @@ abstract class UsersDeliveryModule {
     abstract fun bindSplashFragment(): SplashFragment
     @ContributesAndroidInjector
     abstract fun bindRegisterFragment(): RegisterFragment
+    @ContributesAndroidInjector
+    abstract fun bindLogInFragment(): LogInFragment
 
     @Binds
     internal abstract fun bindViewModelFactory(
@@ -38,4 +42,8 @@ abstract class UsersDeliveryModule {
     @IntoMap
     @ViewModelKey(RegistrationViewModel::class)
     internal abstract fun registrationViewModel(viewModel: RegistrationViewModel): ViewModel
+    @Binds
+    @IntoMap
+    @ViewModelKey(LoginViewModel::class)
+    internal abstract fun loginViewModel(viewModel: LoginViewModel): ViewModel
 }

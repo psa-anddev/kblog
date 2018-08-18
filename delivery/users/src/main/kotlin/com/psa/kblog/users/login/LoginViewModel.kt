@@ -4,9 +4,10 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.psa.kblog.users.R
+import javax.inject.Inject
 import javax.inject.Provider
 
-class LoginViewModel(
+class LoginViewModel @Inject constructor(
         private val loginInteractorProvider: Provider<LoginInput>)
     : ViewModel(), LoginOutput {
     val success: LiveData<Boolean> = MutableLiveData()
