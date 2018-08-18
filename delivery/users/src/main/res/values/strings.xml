@@ -11,4 +11,6 @@
     <string name="userAlreadyExists">User already exists</string>
     <string name="passwordsDoNotMatch">Passwords do not match</string>
     <string name="registrationError">Registration failed</string>
+    <string name="loginError">Error occurred at log in</string>
+    <string name="wrongUserOrPassword">Wrong user name or password</string>
 </resources>
