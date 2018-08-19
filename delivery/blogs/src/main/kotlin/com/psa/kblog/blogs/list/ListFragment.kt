@@ -1,4 +1,6 @@
 package com.psa.kblog.blogs.list
 
-class ListFragment {
+import android.support.v4.app.Fragment
+
+class ListFragment: Fragment() {
 }
