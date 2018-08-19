@@ -2,4 +2,8 @@
     <string name="blogsFailedToLoad">Blogs failed to load</string>
     <string name="logOutFailed">Log out failed</string>
     <string name="blogCreationFailed">Blog failed to create</string>
+    <string name="noBlogs">No Blogs</string>
+    <string name="title">Title</string>
+    <string name="text">Text</string>
+    <string name="create">Create</string>
 </resources>

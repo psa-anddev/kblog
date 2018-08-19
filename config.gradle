@@ -59,7 +59,8 @@ libs.android = [
                         fragment: "android.arch.navigation:navigation-fragment-ktx:${versions.navigation}",
                         ui      : "android.arch.navigation:navigation-ui-ktx:${versions.navigation}",
                         testing : "android.arch.navigation:navigation-testing-ktx:${versions.navigation}"
-                ]
+                ],
+                recycler_view: "com.android.support:recyclerview-v7:${versions.appcompat}"
         ]
 ]
 

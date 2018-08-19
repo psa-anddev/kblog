@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis augue a commodo. Vestibulum arcu purus, lacinia gravida mi eu, maximus fermentum arcu. Nam facilisis urna in diam euismod, et eleifend sem luctus. Mauris sit amet mauris in metus faucibus tempus. Curabitur hendrerit mauris ac orci lacinia, eget varius lorem tincidunt. Nullam quis vehicula nulla. Phasellus in magna in ligula consectetur finibus. Vestibulum in sagittis magna. Etiam laoreet risus lectus, id molestie nisl sodales eget. Nunc viverra, est vel fermentum maximus, nisl erat mattis nulla, nec gravida turpis sem cursus tellus. Donec mattis orci ultricies, rhoncus nisl eu, lobortis ante. Morbi at suscipit tellus, non malesuada justo. Nulla id molestie tellus.
+
+Praesent cursus ipsum id urna pulvinar faucibus. Ut vehicula lacus velit, eu sagittis ante aliquam nec. Nulla quis laoreet nunc. In dictum, ante ut suscipit dignissim, risus tellus fringilla lacus, sed pharetra nunc tortor et tellus. Etiam quis porta quam, in lobortis lorem. Sed fringilla ac ipsum vitae accumsan. Duis eleifend sed metus vitae dictum.
+
+In euismod euismod lectus, quis posuere quam tristique a. Integer volutpat ut quam ut tempor. Aliquam blandit feugiat est. Aliquam euismod sem at turpis lobortis fermentum ut at erat. Aliquam vitae viverra turpis, sed lacinia diam. Maecenas urna massa, fringilla non turpis ac, semper cursus neque. Aliquam erat volutpat. Cras ullamcorper lacus vel lorem finibus molestie.
+
+Vestibulum enim erat, pellentesque sit amet sollicitudin ut, aliquam vitae nisi. Fusce eu ligula libero. In cursus semper neque eu varius. Phasellus a tempor orci, eget tempus risus. Nulla ut dapibus tellus. Donec tempor aliquet lacus, ac dapibus quam elementum in. Mauris quis metus eu lacus rutrum pretium eu ac ipsum. Nam pulvinar sit amet libero sed luctus. Proin vel nisi sed nulla aliquam elementum. Suspendisse dignissim lorem non lacus pulvinar pharetra. Morbi non lacus vel dolor facilisis placerat.
+
+Etiam et accumsan velit. Morbi nec justo tortor. Pellentesque quis magna sed nunc luctus scelerisque vel non quam. Aliquam tempus cursus dolor, sed mattis nisl imperdiet id. Integer et turpis a felis varius tincidunt. Morbi ac purus et ipsum placerat condimentum lacinia faucibus ipsum. Mauris imperdiet nec odio id tempor. Integer fringilla enim at diam posuere, consectetur accumsan est commodo. Ut placerat nisl faucibus sodales eleifend. Proin nec cursus ante, mollis dapibus nunc. Aliquam malesuada vestibulum felis, at pulvinar velit sagittis sed. Curabitur vel tellus tempor, placerat erat nec, iaculis enim. Praesent pellentesque accumsan leo, eget sodales lorem commodo ut. Maecenas id nisl ornare, feugiat arcu vestibulum, auctor nulla. Sed a diam ultrices, blandit lectus a, semper leo." />
+</android.support.constraint.ConstraintLayout>
