@@ -24,7 +24,9 @@ android {
         test.java.srcDirs += "src/test/kotlin"
     }
 
-
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -46,4 +48,5 @@ dependencies {
     testImplementation libs.kotlintest
     testImplementation libs.mockito
     testImplementation project(":delivery:test-utils")
+    testImplementation libs.robolectric
 }
