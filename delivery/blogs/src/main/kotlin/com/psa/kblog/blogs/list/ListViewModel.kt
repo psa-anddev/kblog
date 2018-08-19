@@ -6,10 +6,11 @@ import android.arch.lifecycle.ViewModel
 import com.psa.kblog.blogs.R
 import com.psa.kblog.blogs.SessionNotStarted
 import com.psa.kblog.users.logout.*
+import javax.inject.Inject
 import kotlin.collections.List
 import javax.inject.Provider
 
-class ListViewModel(
+class ListViewModel @Inject constructor(
         private val listBlogsProvider: Provider<ListInput>,
         private val logoutProvider: Provider<LogoutInput>):
         ViewModel(), ListOutput, LogoutOutput {
