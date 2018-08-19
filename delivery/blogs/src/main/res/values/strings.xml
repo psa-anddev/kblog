@@ -1,3 +1,4 @@
 <resources>
-
+    <string name="blogsFailedToLoad">Blogs failed to load</string>
+    <string name="logOutFailed">Log out failed</string>
 </resources>

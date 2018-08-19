@@ -30,13 +30,19 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation libs.kotlin.stdlib
     implementation project(':delivery:base')
+    implementation project(':delivery:di')
+    implementation project(":core")
     implementation project(":blogs")
+    implementation project(":users")
     implementation libs.dagger.core
     implementation libs.dagger.android
     implementation libs.dagger.support
+
     kapt libs.dagger.compiler
     kapt libs.dagger.processor
+
     testImplementation libs.junit
     testImplementation libs.kotlintest
     testImplementation libs.mockito
+    testImplementation project(":delivery:test-utils")
 }
