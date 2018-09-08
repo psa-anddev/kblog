@@ -17,6 +17,9 @@
                     android:scheme="kblogs" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="feature.injector.blogs"
+            android:value="com.psa.kblog.blogs.BlogsComponentBuilder" />
     </application>
 
 </manifest>
