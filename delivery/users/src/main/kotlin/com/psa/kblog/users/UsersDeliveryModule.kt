@@ -6,19 +6,16 @@ import com.psa.kblog.di.CustomViewModelFactory
 import com.psa.kblog.di.ViewModelKey
 import com.psa.kblog.users.login.LogInFragment
 import com.psa.kblog.users.login.LoginViewModel
-import com.psa.kblog.users.register.RegisterInput
-import com.psa.kblog.users.register.RegisterOutput
-import com.psa.kblog.users.register.RegisterRequest
 import com.psa.kblog.users.registration.RegisterFragment
 import com.psa.kblog.users.registration.RegistrationViewModel
 import com.psa.kblog.users.splash.SplashFragment
 import com.psa.kblog.users.splash.SplashViewModel
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import dagger.multibindings.IntoMap
 
+@Suppress("unused")
 @Module
 abstract class UsersDeliveryModule {
     @ContributesAndroidInjector
