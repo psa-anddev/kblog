@@ -24,7 +24,7 @@ class ListCallback(private val adapter: RecyclerView.Adapter<*>)
             (p0 == null && p1 == null) || p0 == p1
 
     override fun onInserted(position: Int, count: Int) {
-        if (adapter.itemCount == 1) {
+        if (adapter.itemCount == count) {
             adapter.notifyItemChanged(0)
             if (count > 1)
                 adapter.notifyItemRangeInserted(1, count - 1)
