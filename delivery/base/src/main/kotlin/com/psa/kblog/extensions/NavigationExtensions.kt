@@ -11,3 +11,11 @@ fun Fragment.navigateToBlogs() {
                 data = Uri.parse("kblogs://blogs")
             })
 }
+
+fun Fragment.navigateToUsers() {
+    startActivity(Intent()
+            .apply {
+                this.`package` = "com.psa.kblog.app"
+                data = Uri.parse("kblogs://main")
+            })
+}

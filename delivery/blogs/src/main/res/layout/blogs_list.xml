@@ -24,6 +24,7 @@
         tools:listitem="@layout/blogs_item" />
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/create"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginEnd="16dp"
@@ -33,6 +34,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/add"
-        tools:theme="@style/Theme.AppCompat"/>
+        tools:theme="@style/Theme.AppCompat" />
 
 </android.support.constraint.ConstraintLayout>
