@@ -30,6 +30,7 @@ class CreateFragment: DaggerFragment(), LifecycleObserver {
         super.onViewCreated(view, savedInstanceState)
         view.create.setOnClickListener { viewModel.createBlog(view.title.editText?.text.toString(),
                 view.text.editText?.text.toString()) }
+        lifecycle.addObserver(this)
     }
 
     @OnLifecycleEvent(ON_START)
