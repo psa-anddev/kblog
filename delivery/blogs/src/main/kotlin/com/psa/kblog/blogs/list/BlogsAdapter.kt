@@ -45,12 +45,11 @@ class BlogsAdapter : RecyclerView.Adapter<BlogViewHolder>() {
             viewHolder.bind(blogs.get(position))
     }
 
-    override fun getItemViewType(position: Int): Int {
-        return if (blogs.size() == 0)
-            0
-        else
-            1
-    }
+    override fun getItemViewType(position: Int): Int =
+            if (blogs.size() == 0)
+                0
+            else
+                1
 
     fun add(blogs: List<RenderedBlog>) {
         this.blogs.addAll(blogs)
