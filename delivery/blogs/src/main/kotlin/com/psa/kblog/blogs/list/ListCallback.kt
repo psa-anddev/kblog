@@ -3,7 +3,7 @@ package com.psa.kblog.blogs.list
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.util.SortedListAdapterCallback
 
-class ListCallback(adapter: RecyclerView.Adapter<*>)
+class ListCallback(private val adapter: RecyclerView.Adapter<*>)
     : SortedListAdapterCallback<RenderedBlog>(adapter) {
     override fun areItemsTheSame(p0: RenderedBlog?,
                                  p1: RenderedBlog?): Boolean =
@@ -22,4 +22,13 @@ class ListCallback(adapter: RecyclerView.Adapter<*>)
                                     p1: RenderedBlog?)
             : Boolean =
             (p0 == null && p1 == null) || p0 == p1
+
+    override fun onInserted(position: Int, count: Int) {
+        if (adapter.itemCount == 1) {
+            adapter.notifyItemChanged(0)
+            if (count > 1)
+                adapter.notifyItemRangeInserted(1, count - 1)
+        } else
+            super.onInserted(position, count)
+    }
 }
