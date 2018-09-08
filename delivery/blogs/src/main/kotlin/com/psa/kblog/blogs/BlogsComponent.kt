@@ -11,7 +11,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 abstract class BlogsComponent: FeatureAndroidInjector {
     @Component.Builder
     abstract class Builder {
-        abstract fun globalComponent(component: GlobalComponent)
+        abstract fun globalComponent(component: GlobalComponent): Builder
         abstract fun build(): BlogsComponent
     }
 }
